@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "12a08800-0e01-478c-a7e6-737e004d8dc7",
+		"name": "MessageApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List messages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user",
+						"value": "luiz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check message by Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-user",
+						"type": "text",
+						"value": "luiz"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/messages/1/check",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"messages",
+						"1",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user",
+						"type": "text",
+						"value": "luiz"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\": \"jose\",\n\t\"subject\": \"texto\",\n\t\"detail\": \"other text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
