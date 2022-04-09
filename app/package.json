@@ -10,7 +10,7 @@
   "dependencies": {
     "expo": "~36.0.0",
     "join-url": "^2.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "momentjs": "^2.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
